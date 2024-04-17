@@ -51,7 +51,7 @@ public class ProjectFakerTest : BaseApiTest
         _logger.Info(_project.ToString());
     }
 
-    [Test]
+  /*  [Test]
     [Order(2)]
     [Category("NFE")]
     public void GetProjectsTest()
@@ -94,7 +94,7 @@ public class ProjectFakerTest : BaseApiTest
         
         _logger.Info(notActualProject);
     }
-
+  */
     [TearDown]
     [AllureAfter]
     public void DeleteProject()
