@@ -65,9 +65,8 @@ public class ProjectFakerTest : BaseApiTest
         AllureApi.Step("Calling the Get Projects method");
         var projectList = ProjectService!.GetProjects();
         
-        AllureApi.Step("Calling the Get Project method and filling it with the value of the existing maximum id +1");
-        //var notActualIdProject = projectList.Result.ProjectsList.Max(x => x.Id) + 1;
-        var notActualProject = ProjectService!.GetProject(/*notActualIdProject.ToString()*/"10000");
+        AllureApi.Step("Calling the Get Project method and filling it with the value of a non-existent identifier");
+        var notActualProject = ProjectService!.GetProject("10000");
 
         AllureApi.Step("Checking that an error with text is returned \"Field :project_id is not a valid or accessible project.\"");
         Assert.That(notActualProject.Result.Error, Is.EqualTo("Field :project_id is not a valid or accessible project."));
