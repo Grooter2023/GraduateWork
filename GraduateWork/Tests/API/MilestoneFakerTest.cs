@@ -61,7 +61,7 @@ public class MilestoneFakerTest : BaseApiTest
 
         _logger.Info(_milestone.ToString());
     }
-/*
+
     [Test]
     [Order(2)]
     [Category("NFE")]
@@ -105,7 +105,7 @@ public class MilestoneFakerTest : BaseApiTest
 
         _logger.Info(notActualMilestone);
     }
-*/
+
     [TearDown]
     [AllureAfter]
     public void DeleteProject()

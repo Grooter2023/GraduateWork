@@ -51,28 +51,8 @@ public class ProjectFakerTest : BaseApiTest
         _logger.Info(_project.ToString());
     }
 
-  /*  [Test]
-    [Order(2)]
-    [Category("NFE")]
-    public void GetProjectsTest()
-    {
-        AllureApi.SetTestName("Get Projects");
-        AllureApi.SetDescription("Request detailed information about the project");
-        AllureApi.AddFeature("NFE");
-        AllureApi.AddStory("Story_2");
-        AllureApi.SetOwner("Anisimova Tany");
-
-        AllureApi.Step("Calling the Get Projects method");
-        var projectList = ProjectService!.GetProjects();
-        
-        AllureApi.Step("Checking the Get Projects method");
-        Assert.That(projectList.Result.ProjectsList.Count, Is.EqualTo(16));
-
-        _logger.Info(projectList.ToString());
-    }
-
     [Test]
-    [Order(3)]
+    [Order(2)]
     [Category("AFE")]
     public void GetProjectsUnknownTest()
     {
@@ -94,7 +74,7 @@ public class ProjectFakerTest : BaseApiTest
         
         _logger.Info(notActualProject);
     }
-  */
+
     [TearDown]
     [AllureAfter]
     public void DeleteProject()
