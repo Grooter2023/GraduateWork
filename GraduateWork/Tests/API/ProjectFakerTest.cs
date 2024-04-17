@@ -66,7 +66,7 @@ public class ProjectFakerTest : BaseApiTest
         var projectList = ProjectService!.GetProjects();
         
         AllureApi.Step("Checking the Get Projects method");
-        Assert.That(projectList.Result.ProjectsList.Count, Is.EqualTo(10));
+        Assert.That(projectList.Result.ProjectsList.Count, Is.EqualTo(16));
 
         _logger.Info(projectList.ToString());
     }
