@@ -72,7 +72,7 @@ public class ProjectFakerTest : BaseApiTest
         AllureApi.Step("Checking that an error with text is returned \"Field :project_id is not a valid or accessible project.\"");
         //Assert.That(notActualProject.Result.Error, Is.EqualTo("Field :project_id is not a valid or accessible project."));
 
-        _logger.Info("AAA " + notActualProject);
+        _logger.Info("AAA " + notActualIdProject + " qwer " + notActualProject);
     }
 
     [TearDown]
