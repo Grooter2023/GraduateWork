@@ -9,6 +9,8 @@ using NUnit.Allure.Attributes;
 
 namespace GraduateWork.Tests.API;
 [TestFixture]
+
+[AllureSuite("API Tests Project")]
 public class ProjectFakerTest : BaseApiTest
 {
     private readonly Logger _logger = LogManager.GetCurrentClassLogger();
