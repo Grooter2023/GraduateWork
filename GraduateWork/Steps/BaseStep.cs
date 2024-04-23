@@ -11,4 +11,6 @@ public class BaseStep(IWebDriver driver)
     protected LoginPage? LoginPage { get; set; }
     protected DashboardPage? DashboardPage { get; set; }
     protected AddProjectPage? AddProjectPage { get; set; }
+    protected AddMilestonesPage? AddMilestonesPage { get; set; }
+    protected MilestonesPage? MilestonesPage { get; set; }
 }

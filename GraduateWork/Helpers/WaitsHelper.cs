@@ -81,4 +81,10 @@ public class WaitsHelper(IWebDriver driver, TimeSpan timeout)
         // Использование
         return fluentWait.Until(_ => driver.FindElement(locator));
     }
+
+    public bool ElementToBeClickable(By locator)
+    {
+       return _wait.Until(_ => ExpectedConditions.ElementToBeClickable(locator)) != null;
+    }
+    
 }

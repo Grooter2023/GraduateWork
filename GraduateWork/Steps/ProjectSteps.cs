@@ -1,7 +1,6 @@
 using GraduateWork.Models;
 using GraduateWork.Pages.ProjectPages;
 using OpenQA.Selenium;
-using GraduateWork.Pages.ProjectPages;
 
 namespace GraduateWork.Steps;
 

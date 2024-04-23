@@ -10,11 +10,6 @@ public class RadioButton
     private List<string> _values;
     private List<string> _texts;
 
-    /// <summary>
-    /// Локатор данного элемента должен использовать атрибут name
-    /// </summary>
-    /// <param name="webDriver"></param>
-    /// <param name="by"></param>
     public RadioButton(IWebDriver webDriver, By by)
     {
         _uiElements = new List<UIElement>();

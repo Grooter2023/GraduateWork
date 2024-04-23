@@ -1,11 +1,21 @@
+using Allure.Net.Commons;
 using GraduateWork.Models;
+using NUnit.Allure.Attributes;
 
-namespace GraduateWork.Tests.GUI;
+namespace GraduateWork.Tests.UI;
 
+[AllureSuite("UI tests on Project")]
 public class ProjectTest : BaseTest
 {
     [Test]
-    [Category("Regression")]
+    [AllureFeature("Positive UI Tests")]
+    [AllureStory("Story_03")]
+    [AllureDescription("Ñhecking project creation")]
+    [AllureSeverity((Allure.Net.Commons.SeverityLevel)SeverityLevel.normal)]
+    [AllureOwner("Anisimova Tany")]
+    [AllureLink("Website", "https://grooter00.testrail.io/index.php?/auth/login")]
+    [AllureTms("TMS-001")]
+    [Parallelizable(scope: ParallelScope.Self)]
     public void SuccessfulAddProjectTest()
     {
         _navigationSteps.SuccessfulLogin(Admin);

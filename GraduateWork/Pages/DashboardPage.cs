@@ -6,8 +6,8 @@ namespace GraduateWork.Pages
     {
         private const string END_POINT = "index.php?/dashboard";
 
-        // Описание элементов
         private static readonly By SidebarProjectsAddButtonBy = By.Id("sidebar-projects-add");
+        private static readonly By TooltipBy = By.XPath(".//a[contains(@tooltip-header,'Detail View')]");
 
         protected override bool EvaluateLoadedStatus()
         {
@@ -27,5 +27,6 @@ namespace GraduateWork.Pages
         }
 
         public IWebElement SidebarProjectsAddButton => WaitsHelper.WaitForExists(SidebarProjectsAddButtonBy);
+        public IWebElement Tooltip => WaitsHelper.WaitForExists(TooltipBy);
     }
 }

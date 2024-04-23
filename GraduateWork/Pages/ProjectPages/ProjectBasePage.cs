@@ -11,7 +11,6 @@ public abstract class ProjectBasePage(IWebDriver? driver, bool openByURL = false
     private static readonly By ShowAnnouncementCheckBoxBy = By.Id("show_announcement");
     private static readonly By TypeRadioButtonBy = By.Name("suite_mode");
 
-    // Атомарные Методы
     public IWebElement NameInput => WaitsHelper.WaitForExists(NameInputBy);
     public IWebElement AnnouncementTextArea => WaitsHelper.WaitForExists(AnnouncementTextAreaBy);
     public IWebElement ShowAnnouncementCheckBox => WaitsHelper.WaitForExists(ShowAnnouncementCheckBoxBy);
