@@ -11,7 +11,7 @@ public class ProjectTest : BaseTest
     [AllureFeature("Positive UI Tests")]
     [AllureStory("Story_03")]
     [AllureDescription("Ñhecking project creation")]
-    [AllureSeverity((Allure.Net.Commons.SeverityLevel)SeverityLevel.normal)]
+    [AllureSeverity(SeverityLevel.critical)]
     [AllureOwner("Anisimova Tany")]
     [AllureLink("Website", "https://grooter00.testrail.io/index.php?/auth/login")]
     [AllureTms("TMS-001")]

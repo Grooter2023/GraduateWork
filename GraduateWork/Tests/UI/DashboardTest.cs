@@ -10,7 +10,7 @@ public class DashboardTest : BaseTest
     [Test]
     [AllureFeature("Positive UI Tests")]
     [AllureStory("Story_03")]
-    [AllureSeverity((Allure.Net.Commons.SeverityLevel)SeverityLevel.trivial)]
+    [AllureSeverity(SeverityLevel.critical)]
     [AllureDescription("Tooltip testing")]
     [AllureOwner("Anisimova Tany")]
     [AllureLink("Website", "https://grooter00.testrail.io/index.php?/auth/login")]

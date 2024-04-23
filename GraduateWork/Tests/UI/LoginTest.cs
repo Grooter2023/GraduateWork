@@ -11,7 +11,7 @@ public class LoginTest : BaseTest
     [AllureFeature("Positive UI Tests")]
     [AllureStory("Story_01")]
     [AllureDescription("Checking successful login as administrator")]
-    [AllureSeverity((Allure.Net.Commons.SeverityLevel)SeverityLevel.normal)]
+    [AllureSeverity(SeverityLevel.normal)]
     [AllureOwner("Anisimova Tany")]
     [AllureLink("Website", "https://grooter00.testrail.io/index.php?/auth/login")]
     [AllureTms("TMS-001")]
@@ -30,7 +30,7 @@ public class LoginTest : BaseTest
     [AllureFeature("Negative UI Tests")]
     [AllureStory("Story_01")]
     [AllureDescription("Checking if you entered the wrong password to log in as an administrator")]
-    [AllureSeverity((Allure.Net.Commons.SeverityLevel)SeverityLevel.normal)]
+    [AllureSeverity(SeverityLevel.normal)]
     [AllureOwner("Anisimova Tany")]
     [AllureLink("Website", "https://grooter00.testrail.io/index.php?/auth/login")]
     [AllureTms("TMS-001")]
@@ -52,7 +52,7 @@ public class LoginTest : BaseTest
     [AllureFeature("Negative UI Tests")]
     [AllureStory("Story_01")]
     [AllureDescription("Checking for entering an incorrect username to log in as a normal user")]
-    [AllureSeverity((Allure.Net.Commons.SeverityLevel)SeverityLevel.critical)]
+    [AllureSeverity(SeverityLevel.critical)]
     [AllureOwner("Anisimova Tany")]
     [AllureLink("Website", "https://grooter00.testrail.io/index.php?/auth/login")]
     [AllureTms("TMS-001")]
@@ -63,7 +63,7 @@ public class LoginTest : BaseTest
             _navigationSteps
                 .IncorrectLogin(new User
                 {
-                    Username = "wrongUsername",
+                    Username = "wro",
                     Password = StandardUser.Password,
                 })
                 .GetErrorLabelText(),
