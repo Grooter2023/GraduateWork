@@ -45,30 +45,7 @@ public class MilestoneTest : BaseTest
         Assert.That(_milestoneSteps.FileUpload("picture.jpg"));
     }
 
-    [Test]
-    [Order(3)]
-    [AllureFeature("Positive UI Tests")]
-    [AllureStory("Story_02")]
-    [AllureDescription("Checking the input field for boundary values")]
-    [AllureSeverity((Allure.Net.Commons.SeverityLevel)SeverityLevel.minor)]
-    [AllureOwner("Anisimova Tany")]
-    [AllureLink("Website", "https://grooter00.testrail.io/index.php?/auth/login")]
-    [AllureTms("TMS-001")]
-    [Parallelizable(scope: ParallelScope.Self)]
-    public void LimitValuesTest()
-    {
-        _navigationSteps.SuccessfulLogin(StandardUser);
 
-        Milestone addMilestone = new Milestone()
-        {
-            Name = "1",
-        };
-
-        var lastMilestoneName = _milestoneSteps.AddMilestone(addMilestone).SearchAllElements.Last().Text;
-
-        Assert.That(lastMilestoneName,
-            Is.EqualTo("1"));
-    }
 
     [Test]
     [Order(4)]
@@ -117,6 +94,31 @@ public class MilestoneTest : BaseTest
 
             Assert.That(milstonePage.DeleteElementBlocker != null);
         });
+    }
+
+    [Test]
+    [Order(3)]
+    [AllureFeature("Positive UI Tests")]
+    [AllureStory("Story_02")]
+    [AllureDescription("Checking the input field for boundary values")]
+    [AllureSeverity((Allure.Net.Commons.SeverityLevel)SeverityLevel.minor)]
+    [AllureOwner("Anisimova Tany")]
+    [AllureLink("Website", "https://grooter00.testrail.io/index.php?/auth/login")]
+    [AllureTms("TMS-001")]
+    [Parallelizable(scope: ParallelScope.Self)]
+    public void LimitValuesTest()
+    {
+        _navigationSteps.SuccessfulLogin(StandardUser);
+
+        Milestone addMilestone = new Milestone()
+        {
+            Name = "1",
+        };
+
+        var lastMilestoneName = _milestoneSteps.AddMilestone(addMilestone).SearchAllElements.Last().Text;
+
+        Assert.That(lastMilestoneName,
+            Is.EqualTo("1"));
     }
 
     [Test]

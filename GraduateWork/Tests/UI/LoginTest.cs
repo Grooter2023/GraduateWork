@@ -63,7 +63,7 @@ public class LoginTest : BaseTest
             _navigationSteps
                 .IncorrectLogin(new User
                 {
-                    Username = "",
+                    Username = "12piubmmm",
                     Password = StandardUser.Password,
                 })
                 .GetErrorLabelText(),

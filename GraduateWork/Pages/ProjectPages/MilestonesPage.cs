@@ -1,7 +1,5 @@
-﻿using AngleSharp.Dom;
-using GraduateWork.Elements;
+﻿using GraduateWork.Elements;
 using OpenQA.Selenium;
-using SeleniumExtras.WaitHelpers;
 using System.Collections.ObjectModel;
 
 namespace GraduateWork.Pages.ProjectPages;
