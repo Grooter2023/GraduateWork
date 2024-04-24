@@ -6,7 +6,6 @@ public class ProjectsPage(IWebDriver? driver, bool openByURL = false) : BasePage
 {
     private const string END_POINT = "index.php?/admin/projects/overview";
 
-    // Описание элементов
     private static readonly By TitleBy = By.XPath("//*[contains(@class, 'page_title') and contains(text(), 'Projects')]");
     private static readonly By SuccessMessageBy = By.ClassName("message-success");
 

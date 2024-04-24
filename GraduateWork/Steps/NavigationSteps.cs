@@ -10,32 +10,44 @@ public class NavigationSteps : BaseStep
 {
     public NavigationSteps(IWebDriver driver) : base(driver) { }
 
-    [AllureStep]
+    [AllureStep("Login Page navigation")]
     public LoginPage NavigateToLoginPage()
     {
         return new LoginPage(Driver);
     }
 
-    [AllureStep]
+    [AllureStep("Dashboard Page navigation")]
     public DashboardPage NavigateToDashboardPage()
     {
         return new DashboardPage(Driver);
     }
 
-    [AllureStep]
+    [AllureStep("Add Project Page navigation")]
     public AddProjectPage NavigateToAddProjectPage()
     {
         return new AddProjectPage(Driver);
     }
 
-    [AllureStep]
+    [AllureStep("Milestones Page navigation")]
+    public MilestonesPage NavigateToMilestonesPage()
+    {
+        return new MilestonesPage(Driver,true);
+    }
+
+    [AllureStep("Milestones Page navigation")]
     public DashboardPage SuccessfulLogin(User user)
     {
         return Login<DashboardPage>(user);
     }
 
-    [AllureStep]
+    [AllureStep("Input login and password")]
     public LoginPage IncorrectLogin(User user)
+    {
+        return Login<LoginPage>(user);
+
+    }
+    [AllureStep("Input incorrect password")]
+    public LoginPage IncorrectPassword(User user)
     {
         return Login<LoginPage>(user);
     }

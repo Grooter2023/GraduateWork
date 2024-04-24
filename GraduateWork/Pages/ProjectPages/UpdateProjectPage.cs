@@ -6,7 +6,6 @@ public class UpdateProjectPage(IWebDriver? driver, bool openByURL = false) : Pro
 {
     private const string END_POINT = "index.php?/admin/projects/add";
 
-    // Описание элементов
     private static readonly By SaveButtonBy = By.Id("name");
 
     protected override bool EvaluateLoadedStatus()
@@ -19,6 +18,5 @@ public class UpdateProjectPage(IWebDriver? driver, bool openByURL = false) : Pro
         return END_POINT;
     }
 
-    // Атомарные Методы
     public IWebElement SaveButton => WaitsHelper.WaitForExists(SaveButtonBy);
 }

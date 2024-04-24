@@ -62,7 +62,7 @@ namespace GraduateWork.Helpers.Configuration
                     user.UserType = section["UserType"].ToLower() switch
                     {
                         "admin" => UserType.Admin,
-                        "user" => UserType.Standard,
+                        "standard" => UserType.StandardUser,
                         _ => user.UserType
                     };
 
@@ -74,6 +74,7 @@ namespace GraduateWork.Helpers.Configuration
         }
 
         public static User? Admin => Users.Find(x => x?.UserType == UserType.Admin);
+        public static User? StandardUser => Users.Find(x => x?.UserType == UserType.StandardUser);
 
         public static User? UserByUsername(string username) => Users.Find(x => x?.Username == username);
 

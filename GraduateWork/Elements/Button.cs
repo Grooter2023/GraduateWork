@@ -1,4 +1,5 @@
 using OpenQA.Selenium;
+using SeleniumExtras.WaitHelpers;
 
 namespace GraduateWork.Elements;
 

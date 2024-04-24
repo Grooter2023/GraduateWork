@@ -7,7 +7,6 @@ public class AddProjectPage(IWebDriver? driver, bool openByURL = false) : Projec
 {
     private const string END_POINT = "index.php?/admin/projects/add";
 
-    // Описание элементов
     private static readonly By AddButtonBy = By.Id("accept");
 
     protected override string GetEndpoint()
@@ -20,6 +19,5 @@ public class AddProjectPage(IWebDriver? driver, bool openByURL = false) : Projec
         return WaitsHelper.WaitForVisibilityLocatedBy(AddButtonBy).Displayed;
     }
 
-    // Атомарные Методы
     public Button AddButton => new Button(Driver, AddButtonBy);
 }
